@@ -19,5 +19,5 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'^$',TemplateView.as_view(template_name='homepage.html')),
+    path('',TemplateView.as_view(template_name='homepage.html')),
 ]
