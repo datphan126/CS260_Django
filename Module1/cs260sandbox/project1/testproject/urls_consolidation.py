@@ -16,14 +16,7 @@ Including another URLconf
 from django.urls import include, path
 from django.views.generic import TemplateView
 
-from testproject.payment import views as payment_views
-
-payment_patterns = [
-    path('', payment_views.pay),
-    path('help/', payment_views.help),
-]
-
 urlpatterns = [
     path('',TemplateView.as_view(template_name='homepage.html')),
-    path('payment/', include(payment_patterns)),
+    path('payment/', include('testproject.payment.urls')),
 ]
