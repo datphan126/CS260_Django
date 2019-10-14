@@ -10,7 +10,10 @@
 
 <body>
     <h4>This is the payment page.</h4>
-    <p>User's agent is: {{ request.META.HTTP_USER_AGENT }}</p>
+    <p>Payment type: {{ payment_type }}</p>
+    <p>Discount: {{ discount }}%</p>
+    <p>City: {{ address.city }}</p>
+    <p>Zipcode: {{ address.zipcode }}</p>
 </body>
 
 </html>
