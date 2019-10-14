@@ -11,20 +11,20 @@
 <body>
     <div style="text-align: center">
         <h1>Welcome to my Banana store</h1>
-        <table>
+        <table style="margin-left:auto; margin-right:auto;">
             <tr>
-                <td><img src="http://bit.ly/2IPoVn9" alt="Banana Bread" height="42" width="42"></td>
-                <td><img src="http://bit.ly/2Bf6Z0V" alt="Banana Chips" height="42" width="42"></td>
-                <td><img src="http://bit.ly/2IIBbG7" alt="Banana Juice" height="42" width="42"></td>
-                <td><img src="http://bit.ly/3292pgJ" alt="Banana Muffins" height="42" width="42"></td>
-                <td><img src="http://bit.ly/31dqDFt" alt="Banana Pancake" height="42" width="42"></td>
+                <td><img src="http://bit.ly/2IPoVn9" alt="Banana Bread" height="200" width="200"></td>
+                <td><img src="http://bit.ly/2Bf6Z0V" alt="Banana Chips" height="200" width="200"></td>
+                <td><img src="http://bit.ly/2IIBbG7" alt="Banana Juice" height="200" width="200"></td>
+                <td><img src="http://bit.ly/3292pgJ" alt="Banana Muffins" height="200" width="200"></td>
+                <td><img src="http://bit.ly/31dqDFt" alt="Banana Pancake" height="200" width="200"></td>
             </tr>
             <tr>
-                <td><a href="{% url 'menu_ns:details' 'BananaBread' %}">Banana Bread</a></td>
-                <td><a href="{% url 'menu_ns:details' 'BananaChips' %}">Banana Chips</a></td>
-                <td><a href="{% url 'menu_ns:details' 'BananaJuice' %}">Banana Juice</a></td>
-                <td><a href="{% url 'menu_ns:details' 'BananaMuffins' %}">Banana Muffins</a></td>
-                <td><a href="{% url 'menu_ns:details' 'BananaPancake' %}">Banana Pancake</a></td>
+                <td><a href="{% url 'menu_ns:details' 'Banana Bread' %}?price=10&calories=100&origin=Seattle">Banana Bread</a></td>
+                <td><a href="{% url 'menu_ns:details' 'Banana Chips' %}?price=30&calories=200&origin=UnknownMonkeyIsland">Banana Chips</a></td>
+                <td><a href="{% url 'menu_ns:details' 'Banana Juice' %}?price=20&calories=100&origin=Cali">Banana Juice</a></td>
+                <td><a href="{% url 'menu_ns:details' 'Banana Muffins' %}?price=15&calories=400&origin=Texas">Banana Muffins</a></td>
+                <td><a href="{% url 'menu_ns:details' 'Banana Pancake' %}?price=50&calories=1000&origin=Florida">Banana Pancake</a></td>
             </tr>
         </table>
     </div>
