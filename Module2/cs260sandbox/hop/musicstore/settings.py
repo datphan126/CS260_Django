@@ -53,6 +53,10 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'musicstore.urls'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+STATICFILES_DIRS = [
+    '%s/static/' % (PROJECT_DIR),
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

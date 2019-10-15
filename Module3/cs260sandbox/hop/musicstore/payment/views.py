@@ -7,7 +7,7 @@ from django.contrib import messages
 # Set default payment type to creditcard
 def pay(request, payment_type="Creditcard",discount=0):
 
-    messages.add_message(request, messages.SUCCESS, 'Transaction fee for internation cards is 3%')
+    messages.add_message(request, messages.ERROR, 'Transaction fee for internation cards is 3%')
 
     # 'city' has value 'Seattle' or '' if city not in url
     # 'zipcode' has value '98101' or '' if zipcode not in url
