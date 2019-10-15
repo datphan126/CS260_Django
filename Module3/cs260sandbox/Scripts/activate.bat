@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\sojin\git\CS260\Module2\cs260sandbox"
+set "VIRTUAL_ENV=C:\Users\Sojin\git\CS260\Module3\cs260sandbox"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
