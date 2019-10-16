@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block main%}
+
+<!-- Main Section Heading -->
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Product Information</h2>
+
+<!-- Icon Divider -->
+<div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+    </div>
+    <div class="divider-custom-line"></div>
+</div>
+
+<!-- Main Content -->
+<div style="text-align: center;">
+    <p>Product: {{ info.product }}</p>
+    <p>Price: List Price ${{ info.prices.0.1 }}, Discount Price ${{ info.prices.1.1 }}</p>
+    <p>Nutrition Facts:  Calories {{ info.nutritionFacts.0 }}, Total fat {{ info.nutritionFacts.1 }}, Total carbohydrate {{ info.nutritionFacts.2 }}, Protein {{ info.nutritionFacts.3 }}</p>
+    <p>Origin: {{ info.origin }}</p>
+</div>
+{% endblock%}

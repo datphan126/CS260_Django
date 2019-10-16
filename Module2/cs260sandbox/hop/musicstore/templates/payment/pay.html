@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block main%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Payment page</title>
-</head>
+<!-- Main Section Heading -->
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Payment</h2>
 
-<body>
-    <h4>This is the payment page.</h4>
+<!-- Icon Divider -->
+<div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+    </div>
+    <div class="divider-custom-line"></div>
+</div>
+
+<!-- Main Content -->
+<div style="text-align: center;">
     <p>Payment type: {{ payment_type }}</p>
     <p>Discount: {{ discount }}%</p>
     <p>City: {{ address.city }}</p>
     <p>Zipcode: {{ address.zipcode }}</p>
-</body>
+</div>
 
-</html>
+{% endblock%}

@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'BananaStore.menu',
+    'BananaStore.product',
 ]
 
 MIDDLEWARE = [
@@ -48,10 +48,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'BananaStore.utils.logging.Logging',
 ]
 
 ROOT_URLCONF = 'BananaStore.urls'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATICFILES_DIRS = [
+    '%s/static/' % (PROJECT_DIR),
+]
 
 TEMPLATES = [
     {
