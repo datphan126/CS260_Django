@@ -5,7 +5,7 @@ from django.conf import settings
 # Create your views here.
 
 
-def pay(request, product="BananaChips"):
+def product(request, product="BananaChips"):
     discount = settings.DISCOUNT
 
     price = request.GET.get('price', 'N/A')

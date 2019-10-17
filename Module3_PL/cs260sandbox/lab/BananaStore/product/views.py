@@ -4,7 +4,7 @@ from django.template.response import TemplateResponse
 # Create your views here.
 
 
-def pay(request, product="BananaChips"):
+def product(request, product="BananaChips"):
     price = request.GET.get('price', 'N/A')
     calories = request.GET.get('nutrition', 'N/A')
     origin = request.GET.get('origin', 'N/A')
