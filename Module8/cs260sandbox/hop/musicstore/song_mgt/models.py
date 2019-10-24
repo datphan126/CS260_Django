@@ -17,8 +17,8 @@ class Song(models.Model):
         unique_together = ['title', 'artists']
 
 
-def create_process(_title, _artist, _album, _genre, _year, _album_image):
-    song = Song(title=_title, artists=_artist, album=_album,
+def create_process(_title, _artists, _album, _genre, _year, _album_image):
+    song = Song(title=_title, artists=_artists, album=_album,
                 genre=_genre, year=_year, album_image=_album_image)
 
     # Validation - Ensure the instance values comply with those of the model definition

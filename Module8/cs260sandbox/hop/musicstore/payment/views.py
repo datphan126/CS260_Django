@@ -38,7 +38,7 @@ def add_payment(request):
                     form.add_error(None, err)
                 action = 'POST_FAILED'
             except:
-                print("Unexpected error: " + sys.exc_info()[0])
+                print("Unexpected error: " + str(sys.exc_info()[0]))
                 form.add_error(None,'Unexpected error - Please contact your system administrator')
                 action = 'POST_FAILED'
         else:
