@@ -1,0 +1,34 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block header %}
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Homepage</h2>
+{% endblock header %}
+{% block main%}
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Main Content -->
+    {% if product_dict %}
+        <div class="row">
+
+        <!-- Show song thumbnails -->
+        {% for product in product_dict.values %}
+
+            {% include "product/product_thumbnail.html" with id=product.id name=product.name price=product.price product_image=product.product_image %} 
+            {% include "product/product_popup.html" with id=product.id name=product.name price=product.price nutrition=product.nutrition origin=product.origin product_image=product.product_image %}
+
+        {% endfor %}
+
+        </div>
+    {% endif %}
+</div>
+{% include "divider.html" %}
+<div style="text-align: center;">
+    <button type="button" class="btn btn-danger">
+        DISCOUNT <span class="badge badge-light">{{DISCOUNT}}%</span>
+    </button>
+    <br/><br/><br/>
+    <img src="{% static 'img/organic_icon.png' %}" class="navbar-brand js-scroll-trigger" alt="site_icon">
+</div>
+
+{% endblock%}
