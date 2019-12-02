@@ -8,7 +8,7 @@ from django.contrib import messages
 def pay(request, payment_type="Creditcard",discount=0):
 
     messages.add_message(request, messages.ERROR, 'Transaction fee for internation cards is 3%')
-    
+    import pdb;pdb.set_trace()
     # 'city' has value 'Seattle' or '' if city not in url
     # 'zipcode' has value '98101' or '' if zipcode not in url
     city = request.GET.get('city', 'N/A')
