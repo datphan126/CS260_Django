@@ -106,12 +106,15 @@ WSGI_APPLICATION = 'musicstore.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': env('RDS_ENGINE'),
         'NAME': env('RDS_DB_NAME'),
         'USER': env('RDS_USERNAME'),
         'PASSWORD': env('RDS_PASSWORD'),
         'HOST': env('RDS_HOSTNAME'),
         'PORT': env('RDS_PORT'),
+        # 'OPTIONS': {
+        #     'driver': env('RDS_DRIVER'),
+        # },
     }
 }
 

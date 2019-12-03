@@ -108,6 +108,12 @@ DATABASES = {
         'NAME': 'djangocs260_high',  #the name for the entry in tnsnames.ora
         'USER': env('ORACLE_USER'),
         'PASSWORD': env('ORACLE_PWD'),
+        # Only uncomment the following atributes if needed
+        # 'HOST': env('RDS_HOSTNAME'),
+        # 'PORT': env('RDS_PORT'),
+        # 'OPTIONS': {
+        #     'driver': env('RDS_DRIVER'),
+        # },
     }
 }
 

@@ -104,10 +104,16 @@ WSGI_APPLICATION = 'musicstore.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'djangocs260_high',  #the name for the entry in tnsnames.ora
-        'USER': env('ORACLE_USER'),
-        'PASSWORD': env('ORACLE_PWD'),
+        'ENGINE': env('RDS_ENGINE'),
+        'NAME': env('RDS_DB_NAME'),  #the name for the entry in tnsnames.ora
+        'USER': env('RDS_USERNAME'),
+        'PASSWORD': env('RDS_PASSWORD'),
+        # Only uncomment the following atributes if needed
+        # 'HOST': env('RDS_HOSTNAME'),
+        # 'PORT': env('RDS_PORT'),
+        # 'OPTIONS': {
+        #     'driver': env('RDS_DRIVER'),
+        # },
     }
 }
 
