@@ -1,9 +1,8 @@
-SECRET_KEY='nllx%9okz2$&0=_l&04*5*hjzghj%_*etf&omuhy83v!$wtt(3'
-DEBUG=True
-RDS_ENGINE=django.db.backends.oracle
-RDS_DB_NAME=djangocs260_high
-RDS_USERNAME=ADMIN
-RDS_PASSWORD='ZSHjmkr6TJpT'
+SECRET_KEY='<your_django_secret_key>'
+RDS_ENGINE=<db_engine>
+RDS_DB_NAME=<db_name>
+RDS_USERNAME=<db_username>
+RDS_PASSWORD='<db_password>'
 RDS_HOSTNAME=<db_server_name>
 RDS_PORT=<db_server_port>
 RDS_DRIVER='ODBC Driver <version> for SQL Server'
